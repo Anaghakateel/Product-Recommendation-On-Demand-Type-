@@ -1,0 +1,17 @@
+flowchart TD
+  A["Step 0: Entry / Onboarding<br/>New / Returning / Port-in / Guest<br/>Explain location permission<br/>Auto-detect or manual address"] --> B["Step 1: Need Analysis<br/>Progressive questionnaire<br/>Intent (free-text + suggestions)<br/>Product preference<br/>Interests<br/>Current usage<br/>Budget slider<br/>Address (auto/manual + map)<br/>Feasibility toggle<br/>Save context (guest/sign-in)"]
+  B --> C["Step 2: Processing<br/>Coverage & promos & eligibility checks<br/>Instant when possible<br/>Show fallback (cached/manual verify)"]
+  C --> D["Step 3: Recommendations<br/>Header chips: Location verified, Segment, Category, Price range<br/>Plan Cards (Available by default)<br/>Why recommended panel<br/>Compare up to 3 (drawer)<br/>Also viewed / Bundles<br/>Plan detail (modal)<br/>Edge indicators (conditional avail.)<br/>CTAs: Activate / Book install / Chat"]
+  D --> E["Step 3a: Activate Now<br/>Inline form: user details, ID upload, payment<br/>Eligibility checks inline<br/>Schedule installation<br/>Credit check if needed"]
+  D --> F["Step 3b: Book Installation<br/>Pick date/time<br/>Technician availability<br/>ETA"]
+  D --> G["Step 3c: Chat for Help<br/>Context-aware: selected plan + notes"]
+  E --> H["Step 4: Confirmation & Feedback<br/>Order number, schedule, activation date<br/>Plan summary<br/>Feedback (1–5 + comment)<br/>Save to profile / calendar / share"]
+  F --> H
+  G --> D
+  A -.-> I["Edge: Location denied<br/>Allow manual PIN/address<br/>Verify after submit<br/>Explain impact"]
+  D -.-> J["Edge: No eligible plans<br/>Waitlist / Express interest<br/>Call agent / Chat<br/>Show nearby alternatives"]
+  D -.-> K["Edge: Limited promo inventory<br/>Live counts + countdown"]
+  C -.-> L["Edge: Backend error<br/>Cached offers<br/>Manual verify phone"]
+  H -.-> M["Signal loop<br/>Use selection & feedback to refine future recos"]
+
+

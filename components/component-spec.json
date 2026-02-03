@@ -1,0 +1,70 @@
+{
+  "components": [
+    {
+      "name": "RecommendationCard",
+      "description": "Large tappable plan card filtered to eligible plans by default.",
+      "props": {
+        "planId": "string",
+        "providerName": "string",
+        "planName": "string",
+        "priceMonthly": "number",
+        "promoPriceMonthly": "number|null",
+        "promoDurationMonths": "number|null",
+        "speedMbps": "number|null",
+        "dataCapGb": "number|null",
+        "isUnlimitedData": "boolean",
+        "features": "string[]",
+        "installationEtaDays": "string",
+        "availabilityStatus": "enum: 'available' | 'partial' | 'unavailable'",
+        "eligibilityReasons": "string[]",
+        "matchReasons": "string[]",
+        "recommendedScore": "number",
+        "onActivate": "function(planId)",
+        "onCompare": "function(planId)",
+        "onDetails": "function(planId)",
+        "showWhyRecommended": "boolean",
+        "compact": "boolean"
+      }
+    },
+    {
+      "name": "ComparisonDrawer",
+      "description": "Swipe-up drawer comparing up to 3 plans side-by-side with toggles.",
+      "props": {
+        "selectedPlanIds": "string[] (max 3)",
+        "plans": "Array<{ planId: string, priceMonthly: number, speedMbps: number|null, installationEta: string, contractMonths: number|null, effectiveMonthlyCost: number }>",
+        "toggles": "Array<{ key: string, label: string, value: boolean }>",
+        "onToggleChange": "function(key, value)",
+        "onActivateSelected": "function(planId)",
+        "onClose": "function()"
+      }
+    },
+    {
+      "name": "EligibilityBadge",
+      "description": "Accessible badge indicating eligibility state.",
+      "props": {
+        "status": "enum: 'available' | 'partial' | 'unavailable'",
+        "labelOverride": "string|null",
+        "ariaLabel": "string (for screen readers)"
+      }
+    },
+    {
+      "name": "CTABar",
+      "description": "Sticky bottom bar showing selected plan and primary action.",
+      "props": {
+        "selectedPlanId": "string|null",
+        "primaryLabel": "string",
+        "onPrimaryClick": "function()",
+        "secondaryActions": "Array<{ label: string, onClick: function }>"
+      }
+    }
+  ]
+}
+
+
+
+
+
+
+
+
+

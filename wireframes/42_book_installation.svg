@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="860"><style>.lbl{font:12px system-ui,-apple-system,Segoe UI,Roboto;fill:#51607f}.input{fill:#fff;stroke:#cfd8e3;stroke-width:1;rx:10;ry:10}</style><path d="M1 1h418v858H1z" style="fill:#f7f8fb;stroke:#cfd8e3;stroke-width:2"/><path d="M0 0h380v820H0z" style="fill:#fff;stroke:#1f2a44;stroke-width:2;rx:28;ry:28" transform="translate(20 20)"/><text style="font:600 16px system-ui,-apple-system,Segoe UI,Roboto;fill:#0b1324" transform="translate(44 44)">Book installation</text><text y="22" style="font:11px system-ui,-apple-system,Segoe UI,Roboto;fill:#6b7b9b" transform="translate(44 44)">Pick a preferred date/time. We&apos;ll confirm by SMS.</text><text class="lbl" transform="translate(44 100)">Date</text><path d="M44 108h332v44H44z" class="input"/><text class="lbl" transform="translate(44 160)">Time slot</text><path d="M44 168h332v44H44z" class="input"/><text class="lbl" transform="translate(44 220)">Technician availability</text><path d="M44 228h332v44H44z" class="input"/><path d="M0 0h332v48H0z" style="fill:#2b7fff;stroke:#1e5fd1;stroke-width:1;rx:10;ry:10" transform="translate(44 762)"/><text x="166" y="30" style="font:600 14px system-ui,-apple-system,Segoe UI,Roboto;fill:#fff;text-anchor:middle" transform="translate(44 762)">Confirm booking</text></svg>
+
+
+
+
+
+
