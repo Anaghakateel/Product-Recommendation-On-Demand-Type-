@@ -10,7 +10,8 @@
     "render:flow:watch": "mmdc -w -i \"docs/flow/eligibility_reco_activation_flow.mmd\" -o \"docs/flow/eligibility_reco_activation_flow.svg\" -t default -b transparent",
     "optimize:svgs": "svgo -f wireframes -o wireframes",
     "dev": "http-server prototype -p 5173 -c-1 -o",
-    "dev:5500": "http-server prototype -p 5500 -c-1 -o"
+    "dev:5500": "http-server prototype -p 5500 -c-1 -o",
+    "build": "node scripts/build.mjs"
   },
   "overrides": {
     "puppeteer": "^24.15.0",
