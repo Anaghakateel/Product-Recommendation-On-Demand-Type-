@@ -4,14 +4,18 @@
   "private": true,
   "description": "Mobile-first eligibility-to-activation prototype and design assets",
   "scripts": {
-    "start": "http-server -p 5173 -c-1",
+    "start": "http-server dist -p $PORT -c-1",
     "start:proto": "http-server prototype -p 5173 -c-1 -o",
     "render:flow": "mmdc -i \"docs/flow/eligibility_reco_activation_flow.mmd\" -o \"docs/flow/eligibility_reco_activation_flow.svg\" -t default -b transparent",
     "render:flow:watch": "mmdc -w -i \"docs/flow/eligibility_reco_activation_flow.mmd\" -o \"docs/flow/eligibility_reco_activation_flow.svg\" -t default -b transparent",
     "optimize:svgs": "svgo -f wireframes -o wireframes",
     "dev": "http-server prototype -p 5173 -c-1 -o",
     "dev:5500": "http-server prototype -p 5500 -c-1 -o",
-    "build": "node scripts/build.mjs"
+    "build": "node scripts/build.mjs",
+    "heroku-postbuild": "npm run build"
+  },
+  "dependencies": {
+    "http-server": "^14.1.1"
   },
   "overrides": {
     "puppeteer": "^24.15.0",
@@ -22,7 +26,6 @@
   },
   "devDependencies": {
     "@mermaid-js/mermaid-cli": "^10.9.1",
-    "http-server": "^14.1.1",
     "svgo": "^3.3.2"
   }
 }
